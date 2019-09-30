@@ -2,7 +2,7 @@
 SmileDirectClub coding challenge - create a basic RESTFul service which exposes the SpaceX launch pad information. Design the service keeping in mind that the call to the SpaceX Launchpad API will be replaced by a DB containing the data in the future. Strive to keep changes minimal when this change occurs. 
 
 ## Getting Started
-You can clone this project to either a Windows or Linux machine to build/run using .NET Core 2.1
+You can clone this project to either a Windows or Linux machine and run using .NET Core 2.1
 
 ## Prerequisites
 You will need to ensure the following are installed to build this project:
@@ -18,11 +18,11 @@ After the prerequisites listed above are installed, build and run using the foll
 
       npm install
       
-* Install Angular CLI globally to run Angular unit tests
+* Install Angular CLI globally from command line using npm to run Angular unit tests
 
       npm install -g @angular/cli
 
-* Move to SpaceXSolution directory and run
+* Move to SpaceXSolution directory and use the following command to build and run
 
       dotnet run --environment "Development"
 
