@@ -1,0 +1,43 @@
+<h1>SmileDirectClub SpaceX Coding Challenge</h1>
+<br />
+
+<button mat-flat-button (click)="getLPInfo()">LaunchPad Info</button>
+<mat-form-field style="margin-left:40px">
+  <mat-label>Launch pad status</mat-label>
+  <mat-select [(value)]="defaultStatus" (change)="changeStatus($event)" >
+    <mat-option *ngFor="let status of allstatus" [value]="status.value">
+      {{status.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field style="margin-left:40px">
+  <input matInput placeholder="Limit results (0-all)" [(ngModel)]="limitvalue" >
+</mat-form-field>
+
+
+<br /><br />
+<div class="launchpadinfo-container">
+  <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+      <mat-cell *matCellDef="let launchpad"> {{launchpad.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="full_name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let launchpad"> {{launchpad.full_name}} </mat-cell>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let launchpad"> {{launchpad.status}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
+<br />
