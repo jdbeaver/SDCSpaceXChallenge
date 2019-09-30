@@ -9,7 +9,29 @@ You will need to ensure the following are installed to build this project:
 * [.NET Core](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-2.1.505-windows-x64-installer) - Windows (64-bit) **or**
 * [.NET Core](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu14-04/sdk-2.1.505) - Linux
 * [Node.js](https://nodejs.org/en/download/)
+* [Angular CLI](https://cli.angular.io/) - Angular CLI needed for running Angular unit tests
 
+
+## Run Project
+After the prerequisites listed above are installed, build and run using the following steps:
+* Move to SpaceXSolution/ClientApp directory and run
+
+      npm install
+      
+* Install Angular CLI globally to run Angular unit tests
+
+      npm install -g @angular/cli
+
+* Move to SpaceXSolution directory and run
+
+      dotnet run --environment "Development"
+
+* Open browser window and navigate to the appropriate URL
+
+      http://localhost:5000 for example
+
+   This will start an Angular front end to illustrate the API implementation
+   
 ## Testing - Unit Tests
 * Using **xUnit.net** for .NET Core. Simple unit test created for the API developed. Run via command line by going to XSpaceXSolution.Tests directory and run
 
@@ -19,22 +41,6 @@ You will need to ensure the following are installed to build this project:
 
       ng test
 
-## Run Project
-After the prerequisites listed above are installed, build and run using the following steps:
-* Move to SpaceXSolution/ClientApp directory and run
-
-      npm install
-
-* Move to SpaceXSolution directory and run
-
-      dotnet run --environment "Development"
-
-
-* Open browser window and navigate to the appropriate URL
-
-      http://localhost:5000 for example
-
-   This will start an Angular front end to illustrate the API implementation
 
 ## Relevant files
 
